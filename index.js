@@ -1,6 +1,8 @@
 // Express app to display static html with js and css
 const express = require('express');
 const app = express();
+
+// serve static files from public folder
 app.use(express.static('public'));
 
 // endpoint for index.html

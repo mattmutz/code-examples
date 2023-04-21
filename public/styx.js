@@ -1,21 +1,25 @@
-const beginDate = document.getElementById('beginDate');
-const endDate = document.getElementById('endDate');
+const endDate = dateToday();
 const days = document.getElementById('days');
-const calculate = document.getElementById('calculate');
-calculate.addEventListener('click', () => {
-    days.innerHTML = calculateDaysBetweenDates(beginDate.value, endDate.value);
-});
+const todayDate = document.getElementById('todayDate');
+
+const createDate = '2023-04-20';
 
 function dateToday() {
     const today = new Date();
     return today.toISOString().slice(0, 10);
 }
 
+// calculate days between two dates
+function calculateDaysBetweenDates(beginDate, endDate) {
+    const beginDateObj = new Date(beginDate);
+    const endDateObj = new Date(endDate);
+    const days = (endDateObj - beginDateObj) / (1000 * 60 * 60 * 24);
+    return days;
+}
+
 // populate default values when page loads
 window.onload = () => { 
-    console.info('window.onload');
-    beginDate.value = dateToday();
-    endDate.value = dateToday();
-    days.innerHTML = calculateDaysBetweenDates(beginDate.value, endDate.value);
+    todayDate.innerHTML = dateToday();    
+    days.innerHTML = calculateDaysBetweenDates(createDate, dateToday());
 };
 
