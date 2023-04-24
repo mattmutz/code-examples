@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     line-height: 1.33;
+    height: 100%;
 }
 
 #app {
@@ -30,4 +31,42 @@ input {
     background: #f0f757;
     color: #000000;
     font-weight: bold;
+}
+
+.technologies li {
+    display: inline;
+    margin: 10px;
+}
+
+.ui-display-none {
+    display: none;
+}
+
+li .active {
+    background-color: #34344a!important;
+    color: #ffffff!important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+h2 {
+    margin-top: 4rem;
+}
+
+.industry {
+    background-color: #f0f757;
+}
+
+
+
+.project {
+    margin-top: 2rem;
 }
