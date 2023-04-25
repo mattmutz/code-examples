@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     line-height: 1.33;
     height: 100%;
+    overflow: scroll;
 }
 
 #app {
