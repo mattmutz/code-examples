@@ -66,8 +66,20 @@ h2 {
     background-color: #f0f757;
 }
 
-
-
 .project {
     margin-top: 2rem;
+}
+
+.wmh-btn {
+    background-color: #2072AF !important;
+    border-color: #2072AF !important;
+}
+
+.wmh-btn-green {
+    background-color: #17BF3E !important;
+    border-color: #17BF3E !important;
+}
+
+.wmh-bg-blue {
+    background-color: #2072AF !important;
 }
