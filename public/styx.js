@@ -19,7 +19,11 @@ function calculateDaysBetweenDates(beginDate, endDate) {
 
 // populate default values when page loads
 window.onload = () => { 
-    todayDate.innerHTML = dateToday();    
-    days.innerHTML = calculateDaysBetweenDates(createDate, dateToday());
+    const currentUrl = window.location.pathname;
+    
+    if (currentUrl == '/') {
+        todayDate.innerHTML = dateToday();    
+        days.innerHTML = calculateDaysBetweenDates(createDate, dateToday());
+    }
 };
 
